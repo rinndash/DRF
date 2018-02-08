@@ -12,6 +12,11 @@
 		2EF7F703202D099300CB6789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7F701202D099300CB6789 /* Main.storyboard */; };
 		2EF7F705202D099300CB6789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7F704202D099300CB6789 /* Assets.xcassets */; };
 		2EF7F708202D099300CB6789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7F706202D099300CB6789 /* LaunchScreen.storyboard */; };
+		2EF7F716202D0E9500CB6789 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7F712202D0E9400CB6789 /* RxSwift.framework */; };
+		2EF7F717202D0E9500CB6789 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7F713202D0E9400CB6789 /* SnapKit.framework */; };
+		2EF7F718202D0E9500CB6789 /* Differ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7F714202D0E9500CB6789 /* Differ.framework */; };
+		2EF7F719202D0E9500CB6789 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7F715202D0E9500CB6789 /* RxCocoa.framework */; };
+		2EF7F71B202D104900CB6789 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F71A202D104900CB6789 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		2EF7F704202D099300CB6789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EF7F707202D099300CB6789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EF7F709202D099300CB6789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EF7F712202D0E9400CB6789 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		2EF7F713202D0E9400CB6789 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		2EF7F714202D0E9500CB6789 /* Differ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differ.framework; path = Carthage/Build/iOS/Differ.framework; sourceTree = "<group>"; };
+		2EF7F715202D0E9500CB6789 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		2EF7F71A202D104900CB6789 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF7F716202D0E9500CB6789 /* RxSwift.framework in Frameworks */,
+				2EF7F717202D0E9500CB6789 /* SnapKit.framework in Frameworks */,
+				2EF7F718202D0E9500CB6789 /* Differ.framework in Frameworks */,
+				2EF7F719202D0E9500CB6789 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,7 @@
 			children = (
 				2EF7F6FC202D099300CB6789 /* DRFAiOS */,
 				2EF7F6FB202D099300CB6789 /* Products */,
+				2EF7F711202D0E9400CB6789 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,8 +83,20 @@
 			isa = PBXGroup;
 			children = (
 				2EF7F6FF202D099300CB6789 /* MVCViewController.swift */,
+				2EF7F71A202D104900CB6789 /* Model.swift */,
 			);
 			path = MVC;
+			sourceTree = "<group>";
+		};
+		2EF7F711202D0E9400CB6789 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EF7F714202D0E9500CB6789 /* Differ.framework */,
+				2EF7F715202D0E9500CB6789 /* RxCocoa.framework */,
+				2EF7F712202D0E9400CB6789 /* RxSwift.framework */,
+				2EF7F713202D0E9400CB6789 /* SnapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,12 +174,12 @@
 			files = (
 			);
 			inputPaths = (
-			);
-			outputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differ.framework",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -165,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF7F71B202D104900CB6789 /* Model.swift in Sources */,
 				2EF7F700202D099300CB6789 /* MVCViewController.swift in Sources */,
 				2EF7F6FE202D099300CB6789 /* AppDelegate.swift in Sources */,
 			);
@@ -305,6 +333,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43X83VHC2D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DRFAiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rinndash.DRFAiOS;
@@ -320,6 +352,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43X83VHC2D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DRFAiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rinndash.DRFAiOS;
