@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MVVMViewController.swift
 //  DRFAiOS
 //
 //  Created by 윤진서 on 2018. 2. 9..
@@ -7,38 +7,39 @@
 //
 
 import UIKit
-import SnapKit
+import RxCocoa
+import RxSwift
 
-class MVCViewController: UIViewController {
+class RxMVVMViewController: UIViewController {
     weak var leftOperandTextField: UITextField!
     weak var rightOperandTextField: UITextField!
     weak var resultLabel: UILabel!
     
-    var model: Model = Model()
+    var viewModel: RxViewModel = RxViewModel()
+    let disposeBag: DisposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createSubviews()
         
-        leftOperandTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        rightOperandTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-    }
-    
-    @objc func textFieldDidChange(_ sender: UITextField) {
-        guard let number = sender.text.map(Int.init) else { return }
+        leftOperandTextField.rx.text
+            .asObservable()
+            .bind(to: viewModel.didChangeLeftOperand)
+            .disposed(by: disposeBag)
         
-        if sender == leftOperandTextField {
-            model.leftOperand = number
-        } else if sender == rightOperandTextField {
-            model.rightOperand = number
-        }
+        rightOperandTextField.rx.text
+            .asObservable()
+            .bind(to: viewModel.didChangeRightOperand)
+            .disposed(by: disposeBag)
         
-        resultLabel.text = model.result?.description
+        viewModel.result$
+            .bind(to: resultLabel.rx.text)
+            .disposed(by: disposeBag)
     }
 }
 
-extension MVCViewController {
+extension RxMVVMViewController {
     private func createSubviews() {
         let leftTextField = UITextField()
         self.leftOperandTextField = leftTextField

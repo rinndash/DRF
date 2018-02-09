@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MVVMViewController.swift
 //  DRFAiOS
 //
 //  Created by 윤진서 on 2018. 2. 9..
@@ -7,14 +7,16 @@
 //
 
 import UIKit
-import SnapKit
+import RxCocoa
+import RxSwift
 
-class MVCViewController: UIViewController {
+class MVVMViewController: UIViewController {
     weak var leftOperandTextField: UITextField!
     weak var rightOperandTextField: UITextField!
     weak var resultLabel: UILabel!
     
-    var model: Model = Model()
+    var viewModel: ViewModel = ViewModel()
+    let disposeBag: DisposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,19 +28,17 @@ class MVCViewController: UIViewController {
     }
     
     @objc func textFieldDidChange(_ sender: UITextField) {
-        guard let number = sender.text.map(Int.init) else { return }
-        
         if sender == leftOperandTextField {
-            model.leftOperand = number
+            viewModel.leftOperandString = sender.text
         } else if sender == rightOperandTextField {
-            model.rightOperand = number
+            viewModel.rightOperandString = sender.text
         }
         
-        resultLabel.text = model.result?.description
+        resultLabel.text = viewModel.resultString
     }
 }
 
-extension MVCViewController {
+extension MVVMViewController {
     private func createSubviews() {
         let leftTextField = UITextField()
         self.leftOperandTextField = leftTextField

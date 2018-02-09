@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2F7094202D1D00009513F9 /* RxMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F7092202D1C8E009513F9 /* RxMVVMViewController.swift */; };
+		2E2F7095202D1D03009513F9 /* RxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F7093202D1C8E009513F9 /* RxViewModel.swift */; };
 		2EF7F6FE202D099300CB6789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F6FD202D099300CB6789 /* AppDelegate.swift */; };
 		2EF7F700202D099300CB6789 /* MVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F6FF202D099300CB6789 /* MVCViewController.swift */; };
 		2EF7F703202D099300CB6789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7F701202D099300CB6789 /* Main.storyboard */; };
@@ -17,9 +19,14 @@
 		2EF7F718202D0E9500CB6789 /* Differ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7F714202D0E9500CB6789 /* Differ.framework */; };
 		2EF7F719202D0E9500CB6789 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF7F715202D0E9500CB6789 /* RxCocoa.framework */; };
 		2EF7F71B202D104900CB6789 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F71A202D104900CB6789 /* Model.swift */; };
+		2EF7F723202D164B00CB6789 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F722202D164B00CB6789 /* MVVMViewController.swift */; };
+		2EF7F725202D188200CB6789 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F724202D188200CB6789 /* ViewModel.swift */; };
+		2EF7F729202D1A5500CB6789 /* RXSwift+DRFA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F728202D1A5500CB6789 /* RXSwift+DRFA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E2F7092202D1C8E009513F9 /* RxMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMVVMViewController.swift; sourceTree = "<group>"; };
+		2E2F7093202D1C8E009513F9 /* RxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewModel.swift; sourceTree = "<group>"; };
 		2EF7F6FA202D099300CB6789 /* DRFAiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRFAiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF7F6FD202D099300CB6789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF7F6FF202D099300CB6789 /* MVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +39,9 @@
 		2EF7F714202D0E9500CB6789 /* Differ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differ.framework; path = Carthage/Build/iOS/Differ.framework; sourceTree = "<group>"; };
 		2EF7F715202D0E9500CB6789 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		2EF7F71A202D104900CB6789 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2EF7F722202D164B00CB6789 /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		2EF7F724202D188200CB6789 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2EF7F728202D1A5500CB6789 /* RXSwift+DRFA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RXSwift+DRFA.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2F7091202D1C77009513F9 /* RxMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				2E2F7092202D1C8E009513F9 /* RxMVVMViewController.swift */,
+				2E2F7093202D1C8E009513F9 /* RxViewModel.swift */,
+			);
+			path = RxMVVM;
+			sourceTree = "<group>";
+		};
 		2EF7F6F1202D099300CB6789 = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +88,10 @@
 		2EF7F6FC202D099300CB6789 /* DRFAiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2EF7F727202D1A4600CB6789 /* Util */,
 				2EF7F70F202D0A8A00CB6789 /* MVC */,
+				2EF7F721202D163700CB6789 /* MVVM */,
+				2E2F7091202D1C77009513F9 /* RxMVVM */,
 				2EF7F6FD202D099300CB6789 /* AppDelegate.swift */,
 				2EF7F701202D099300CB6789 /* Main.storyboard */,
 				2EF7F704202D099300CB6789 /* Assets.xcassets */,
@@ -97,6 +119,23 @@
 				2EF7F713202D0E9400CB6789 /* SnapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EF7F721202D163700CB6789 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				2EF7F722202D164B00CB6789 /* MVVMViewController.swift */,
+				2EF7F724202D188200CB6789 /* ViewModel.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		2EF7F727202D1A4600CB6789 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2EF7F728202D1A5500CB6789 /* RXSwift+DRFA.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF7F725202D188200CB6789 /* ViewModel.swift in Sources */,
+				2EF7F723202D164B00CB6789 /* MVVMViewController.swift in Sources */,
+				2E2F7095202D1D03009513F9 /* RxViewModel.swift in Sources */,
+				2E2F7094202D1D00009513F9 /* RxMVVMViewController.swift in Sources */,
+				2EF7F729202D1A5500CB6789 /* RXSwift+DRFA.swift in Sources */,
 				2EF7F71B202D104900CB6789 /* Model.swift in Sources */,
 				2EF7F700202D099300CB6789 /* MVCViewController.swift in Sources */,
 				2EF7F6FE202D099300CB6789 /* AppDelegate.swift in Sources */,
