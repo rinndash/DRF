@@ -48,7 +48,7 @@ class RxViewModel {
 }
 
 struct RxModel {
-    let leftOperand: Int?
-    let rightOperand: Int?
+    var leftOperand: Int?
+    var rightOperand: Int?
     var result: Int? { return leftOperand.flatMap { x in rightOperand.map { y in x + y } } }
 }

@@ -29,3 +29,21 @@ extension ObservableType where E: OptionalType {
         }
     }
 }
+
+extension ObservableType {
+    func zipWithPrevious(initial: E) -> Observable<(E, E)> {
+        return scan((initial, initial), accumulator: { ($0.1, $1) })
+    }
+}
+
+protocol CopyableStruct {
+    func copy(with transform: (inout Self) -> Void) -> Self
+}
+
+extension CopyableStruct {
+    func copy(with transform: (inout Self) -> Void) -> Self {
+        var copy = self
+        transform(&copy)
+        return copy
+    }
+}

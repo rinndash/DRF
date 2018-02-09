@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2E2F7094202D1D00009513F9 /* RxMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F7092202D1C8E009513F9 /* RxMVVMViewController.swift */; };
 		2E2F7095202D1D03009513F9 /* RxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F7093202D1C8E009513F9 /* RxViewModel.swift */; };
+		2E2F7098202D20BB009513F9 /* ReactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F7097202D20BB009513F9 /* ReactViewController.swift */; };
+		2E2F709A202D226C009513F9 /* VDom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F7099202D226C009513F9 /* VDom.swift */; };
+		2E2F709D202D235C009513F9 /* VDomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F709C202D235C009513F9 /* VDomView.swift */; };
 		2EF7F6FE202D099300CB6789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F6FD202D099300CB6789 /* AppDelegate.swift */; };
 		2EF7F700202D099300CB6789 /* MVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7F6FF202D099300CB6789 /* MVCViewController.swift */; };
 		2EF7F703202D099300CB6789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7F701202D099300CB6789 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 /* Begin PBXFileReference section */
 		2E2F7092202D1C8E009513F9 /* RxMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMVVMViewController.swift; sourceTree = "<group>"; };
 		2E2F7093202D1C8E009513F9 /* RxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewModel.swift; sourceTree = "<group>"; };
+		2E2F7097202D20BB009513F9 /* ReactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactViewController.swift; sourceTree = "<group>"; };
+		2E2F7099202D226C009513F9 /* VDom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VDom.swift; sourceTree = "<group>"; };
+		2E2F709C202D235C009513F9 /* VDomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VDomView.swift; sourceTree = "<group>"; };
 		2EF7F6FA202D099300CB6789 /* DRFAiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRFAiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF7F6FD202D099300CB6789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF7F6FF202D099300CB6789 /* MVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,16 @@
 			path = RxMVVM;
 			sourceTree = "<group>";
 		};
+		2E2F7096202D2093009513F9 /* React */ = {
+			isa = PBXGroup;
+			children = (
+				2E2F7097202D20BB009513F9 /* ReactViewController.swift */,
+				2E2F7099202D226C009513F9 /* VDom.swift */,
+				2E2F709C202D235C009513F9 /* VDomView.swift */,
+			);
+			path = React;
+			sourceTree = "<group>";
+		};
 		2EF7F6F1202D099300CB6789 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 				2EF7F70F202D0A8A00CB6789 /* MVC */,
 				2EF7F721202D163700CB6789 /* MVVM */,
 				2E2F7091202D1C77009513F9 /* RxMVVM */,
+				2E2F7096202D2093009513F9 /* React */,
 				2EF7F6FD202D099300CB6789 /* AppDelegate.swift */,
 				2EF7F701202D099300CB6789 /* Main.storyboard */,
 				2EF7F704202D099300CB6789 /* Assets.xcassets */,
@@ -233,12 +250,15 @@
 			files = (
 				2EF7F725202D188200CB6789 /* ViewModel.swift in Sources */,
 				2EF7F723202D164B00CB6789 /* MVVMViewController.swift in Sources */,
+				2E2F709A202D226C009513F9 /* VDom.swift in Sources */,
 				2E2F7095202D1D03009513F9 /* RxViewModel.swift in Sources */,
 				2E2F7094202D1D00009513F9 /* RxMVVMViewController.swift in Sources */,
 				2EF7F729202D1A5500CB6789 /* RXSwift+DRFA.swift in Sources */,
 				2EF7F71B202D104900CB6789 /* Model.swift in Sources */,
 				2EF7F700202D099300CB6789 /* MVCViewController.swift in Sources */,
 				2EF7F6FE202D099300CB6789 /* AppDelegate.swift in Sources */,
+				2E2F709D202D235C009513F9 /* VDomView.swift in Sources */,
+				2E2F7098202D20BB009513F9 /* ReactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
