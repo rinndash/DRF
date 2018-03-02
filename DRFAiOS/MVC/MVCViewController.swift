@@ -21,19 +21,19 @@ class MVCViewController: UIViewController {
         
         createSubviews()
         
-        leftOperandTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        rightOperandTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        leftOperandTextField.addTarget(self, action: #selector(leftOperandFieldDidChange(_:)), for: .editingChanged)
+        rightOperandTextField.addTarget(self, action: #selector(rightOperandFieldDidChange(_:)), for: .editingChanged)
     }
     
-    @objc func textFieldDidChange(_ sender: UITextField) {
+    @objc func leftOperandFieldDidChange(_ sender: UITextField) {
         guard let number = sender.text.map(Int.init) else { return }
-        
-        if sender == leftOperandTextField {
-            model.leftOperand = number
-        } else if sender == rightOperandTextField {
-            model.rightOperand = number
-        }
-        
+        model.leftOperand = number
+        resultLabel.text = model.result?.description
+    }
+    
+    @objc func rightOperandFieldDidChange(_ sender: UITextField) {
+        guard let number = sender.text.map(Int.init) else { return }
+        model.rightOperand = number
         resultLabel.text = model.result?.description
     }
 }

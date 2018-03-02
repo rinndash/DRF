@@ -22,33 +22,15 @@ class RxViewModel {
         let leftOperand$ = leftOperandSubject
             .asObservable()
             .map { $0.flatMap(Int.init) }
+            .filterNil()
         
         let rightOperand$ = rightOperandSubject
             .asObservable()
             .map { $0.flatMap(Int.init) }
+            .filterNil()
         
         result$ = Observable.combineLatest(leftOperand$, rightOperand$)
-            .map(RxModel.init)
-            .map { $0.result?.description }
-        
-//        let leftOperand$ = leftOperandSubject
-//            .asObservable()
-//            .map { $0.flatMap(Int.init) }
-//            .filterNil()
-//        
-//        let rightOperand$ = rightOperandSubject
-//            .asObservable()
-//            .map { $0.flatMap(Int.init) }
-//            .filterNil()
-//        
-//        result$ = Observable.combineLatest(leftOperand$, rightOperand$)
-//            .map(+)
-//            .map { $0.description }
+            .map(+)
+            .map { $0.description }
     }
-}
-
-struct RxModel {
-    var leftOperand: Int?
-    var rightOperand: Int?
-    var result: Int? { return leftOperand.flatMap { x in rightOperand.map { y in x + y } } }
 }

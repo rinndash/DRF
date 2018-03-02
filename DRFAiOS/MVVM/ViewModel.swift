@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 class ViewModel {
-    let model: Model = Model()
+    private let model: Model = Model()
     
     var leftOperandString: String? {
         didSet {
