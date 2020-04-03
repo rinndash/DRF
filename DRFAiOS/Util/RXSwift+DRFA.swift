@@ -19,19 +19,19 @@ extension Optional: OptionalType {
     }
 }
 
-extension ObservableType where E: OptionalType {
-    func filterNil() -> Observable<E.Wrapped> {
-        return self.flatMap { element -> Observable<E.Wrapped> in
+extension ObservableType where Element: OptionalType {
+    func filterNil() -> Observable<Element.Wrapped> {
+        return self.flatMap { element -> Observable<Element.Wrapped> in
             guard let value = element.value else {
-                return Observable<E.Wrapped>.empty()
+                return Observable<Element.Wrapped>.empty()
             }
-            return Observable<E.Wrapped>.just(value)
+            return Observable<Element.Wrapped>.just(value)
         }
     }
 }
 
 extension ObservableType {
-    func zipWithPrevious(initial: E) -> Observable<(E, E)> {
+    func zipWithPrevious(initial: Element) -> Observable<(Element, Element)> {
         return scan((initial, initial), accumulator: { ($0.1, $1) })
     }
 }

@@ -1,9 +1,9 @@
 # Rx
-github "ReactiveX/RxSwift" ~> 3.0.1
+github "ReactiveX/RxSwift"
 
 # Layout
-github "SnapKit/SnapKit" ~> 4.0.0
+github "SnapKit/SnapKit"
 
 # Functional Programming
-github "tonyarnold/Differ" ~> 1.0.3
+github "tonyarnold/Differ"
 
