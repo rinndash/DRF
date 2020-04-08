@@ -16,7 +16,6 @@ class MVVMViewController: UIViewController {
     weak var resultLabel: UILabel!
     
     var viewModel: ViewModel = ViewModel()
-    let disposeBag: DisposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()

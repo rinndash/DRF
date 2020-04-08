@@ -22,9 +22,7 @@ class CycleJSViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         createSubviews()
-        
         behavior()
     }
     
